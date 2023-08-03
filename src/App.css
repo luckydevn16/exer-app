@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --brand-color: #00BCD4
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: inherit
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 3
+}
+.flex {
+    display: flex;
+}
+.center {
+    align-items: center;
+}
+.space-between {
+    justify-content: space-between;
+}
+.colored {
+    color: var(--brand-color)
+}
+.btn {
+    cursor: pointer;
+    border: none;
+    transition: all .2s ease;
+}
+.btn:hover {
+    opacity: .8;
+}
+.btn.primary {
+    min-width: 200px;
+    padding: 0 1rem;
+    height: 58px;
+    background: var(--brand-color);
+    border-radius: 29px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #FFFFFF;
+    border: 1px solid var(--brand-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.section-heading {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.3;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3.5rem;
+}
+
+/*==== NAVBAR =====================*/
+.navbar {
+    padding: 2rem 0;
+    background-color: transparent;
+    position: fixed;
+    z-index: 7;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navbar-content {
+    
+}
+.navbar-logo {
+    width: 3rem;
+    height: auto;
+    margin-right: 7rem;
+}
+.navbar-link {
+    color: #fff;
+    transition: .2s;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    text-shadow: 0 2px 4px #111
+}
+.navbar-link.active {
+    border-bottom: 1px solid var(--brand-color);
+}
+.navbar-link:hover {
+    color: var(--brand-color);
+}
+
+/*==== HERO ====================*/
+.hero-content {
+    position: relative;
+    padding: 18.75rem 0;
+}
+.hero-banner-img {
+    position: absolute;
+    top: -33%;
+    right: 0;
+    z-index: 3;
+    width: 60%;
+    height: auto;
+    opacity: .15
+}
+.hero-dots-img {
+    position: absolute;
+    right: 2rem;
+    bottom: -2rem;
+    z-index: 4;
+    width: 7.3rem;
+    height: auto;
+}
+.hero-content-text {
+    position: relative;
+}
+.hero-tag {
+    font-weight: 600;
+    font-size: 26px;
+}
+.main-heading {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 1.1;
+    margin: 2.5rem 0 1.5rem 0;
+    text-shadow: 0 2px 6px #111
+}
+.hero-descr {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 3.75rem;
+}
+.decor-heading {
+    position: absolute;
+    font-weight: 600;
+    font-size: 200px;
+    color: rgba(255, 255, 255, 0.05);
+    left: 7rem;
+    bottom: -24rem;
+}
+.hero-decor {
+    position: absolute;
+    width: 7.3rem;
+    height: 9.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 5px;
+}
+.hero-decor.first {
+    top: 18%;
+    left: 0;
+}
+.hero-decor.second {
+    top: 25%;
+    left: 1%;
+}
+
+/*==== SEARCH ====================*/
+.search-section {
+    padding: 12rem 0 5rem;
+    position: relative;
+}
+.search-wrapper {
+    height: auto;
+    padding: 0.5rem;
+    background: transparent;
+    border-radius: 100px;
+    max-width: 630px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 6rem auto;
+    border: 2px solid #fff;
+}
+.search-input {
+    height: 58px;
+    background: transparent;
+    border-radius: 29px;
+    border: none;
+    min-width: 280px;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    outline: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.body-parts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.bodyPart-card {
+    min-width: 140px;
+    width: 140px;
+    height: 140px;
+    background-color: transparent;
+    border: 6px solid #00BCD4;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.bodyPart-card:hover {
+    background-color: #00BCD4;
+}
+.bodyPart-card img {
+    width: 4rem;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+.bodyPart-name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    text-align: center;
+    color: #fff;
+}
+.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+    display: none;
+}
+.react-horizontal-scrolling-menu--scroll-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.right-arrow {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+.left-arrow {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+}
+.right-arrow img,
+.left-arrow img {
+    display: block;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: .2s
+}
+.right-arrow img:hover,
+.left-arrow img:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.search-decor {
+    position: absolute;
+    width: 7.3rem;
+    height: 9.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 5px;
+}
+.search-decor.first {
+    top: 36%;
+    right: 0;
+}
+.search-decor.second {
+    top: 44%;
+    right: 1%;
+}
+
+/*==== EXERCISES ==================*/
+.exercises-section {
+    padding: 8rem 0 5rem;
+    position: relative;
+}
+.exercise-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+    z-index: 3
+}
+.exercise-card {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 .5rem 1rem .5rem;
+    background-color: transparent;
+}
+.exercise-card img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    padding: 1rem;
+    place-items: center center;
+    border: 8px solid #697682;
+    background-color: #fff;
+    transition: .2s
+}
+.exercise-card:hover > img {
+    border: 8px solid var(--brand-color);
+}
+.exercise-card-content {
+    padding: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.exercise-card-name {
+    padding: 1rem 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: center;
+}
+.btn-part {
+    background-color: rgb(116, 240, 186);
+    color: #fff;
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    margin: 0 .3rem .3rem;
+}
+.btn-target {
+    background-color: rgb(116, 201, 240);
+    color: #fff;
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    margin: 0 .3rem .3rem;
+}
+.MuiPagination-root {
+    margin-top: 2rem;
+}
+.MuiPagination-ul {
+    justify-content: center;
+}
+.MuiPagination-ul li button {
+    color: #aaa;
+}
+.css-yx0nvq-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    color: #fff
+}
+.MuiButtonBase-root {
+    border-radius: 100px !important;
+}
+.exercises-dots-img {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+}
+
+/*==== FOOTER =================*/
+.footer {
+    background-color: rgb(116, 201, 240);
+    padding: 2rem 0;
+}
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*===== DETAIL ===============*/
+.detail-wrapper {
+    padding: 10rem 0 4rem 0;
+}
+.detail-image {
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+.detail-name {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+.detail-descr {
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    max-width: 580px;
+}
+.detail-item {
+    padding: 1rem;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid rgb(116, 201, 240);
+    text-align: center;
+}
+.detail-item .btn img {
+    display: block;
+    border-radius: 8px;
+}
+.exercise-videos-wrapper {
+    padding: 4rem 0;
+}
+.exercise-videos-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.exercise-video {
+    width: 30%;
+    margin: 0 .5rem 1rem .5rem;
+}
+.exercise-video img {
+    width: 100%;
+    margin-bottom: .8rem;
+}
+.exercise-video-name {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+.exercise-video-channel-name {
+    font-size: 15px;
+    font-weight: 300;
+}
+.similar-exercises-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+@media (max-width:1600px) {
+    .container {
+        max-width: 1080px;
+    }
+    .navbar-link {
+        font-size: 1.1rem;
+    }
+    .hero-content {
+        padding: 14rem 0;
+    }
+    .hero-tag {
+        font-size: 22px;
+    }
+    .main-heading {
+        font-size: 4rem;
+    }
+    .hero-descr {
+        font-size: 20px;
+    }
+    .hero-banner-img {
+        top: -29%;
+        width: 60%;
+    }
+    .decor-heading {
+        left: 7rem;
+        bottom: -14rem;
+    }
+    .btn.primary {
+        font-size: 18px;
+    }
+    .section-heading {
+        font-size: 36px;
+        margin-bottom: 3rem;
+    }
+    .exercise-card-name {
+        font-size: 1.2rem;
+    }
+    .footer {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+    .hero-content {
+        padding: 12rem 0 8rem;
+    }
+    .hero-banner-img {
+        top: -21%;
+        width: 60%;
+    }
+    .decor-heading {
+        left: 2rem;
+        bottom: -14rem;
+        font-size: 140px;
+    }
+    .exercise-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .exercise-card {
+        width: 30%;
+    }
+    .btn-part, .btn-target {
+        padding: 0.3rem .6rem;
+        font-size: .7rem;
+    }
+    .exercise-video {
+        width: 45%;
+    }
+    .similar-exercises-content .exercise-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .navbar-link {
+        font-size: .9rem;
+    }
+    .navbar-logo {
+        width: 2.5rem;
+        margin-right: 2rem;
+    }
+    .hero-banner-img {
+        top: -28%;
+        width: 100%;
+    }
+    .hero-content {
+        padding: 8rem 0 4rem;
+    }
+    .hero-tag {
+        font-size: 18px;
+    }
+    .main-heading {
+        font-size: 2.5rem;
+        margin: 2rem 0 1rem 0;
+    }
+    .hero-descr {
+        font-size: 18px;
+    }
+    .decor-heading {
+        left: 1rem;
+        bottom: -10rem;
+        font-size: 80px;
+    }
+    .search-section {
+        padding: 5rem 0 4rem;
+    }
+    .section-heading {
+        font-size: 26px;
+        margin-bottom: 2rem;
+    }
+    .search-wrapper {
+        margin: 0 auto 4rem auto;
+        display: flex;
+    }
+    .search-input {
+        height: 45px;
+        width: 80%;
+        min-width: unset;
+        font-size: 1.2rem;
+        padding-left: 1rem;
+    }
+    .search-btn {
+        height: 45px !important;
+        width: 20% !important;
+        width: 8rem !important;
+        min-width: unset !important;
+        font-size: 16px !important;
+    }
+    .bodyPart-card {
+        min-width: 108px;
+        width: 108px;
+        height: 108px;
+    }
+    .bodyPart-name {
+        font-size: .9rem;
+    }
+    .exercise-content {
+        justify-content: center;
+    }
+    .exercise-card {
+        width: 100%;
+        max-width: 280px;
+    }
+    .footer {
+        padding: .5rem 0;
+    }
+    .detail-wrapper {
+        padding: 5rem 0 2rem 0;
+    }
+    .detail-wrapper .container {
+        flex-direction: column;
+    }
+    .detail-image {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .detail-name {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    .detail-descr {
+        margin-bottom: 1.4rem;
+        font-size: .9rem;
+    }
+    .exercise-video {
+        width: 100%;
+        margin-bottom: 1.6rem;
+    }
+}
